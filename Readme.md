@@ -64,3 +64,39 @@ module.exports = {
   // 他のJest設定
 }
 ```
+
+https://jestjs.io/ja/docs/tutorial-react-native#transformignorepatterns-customization
+
+https://dev.to/aneeqakhan/integrating-react-native-app-with-jest-4bac
+
+transformIgnorePatternsが肝らしい
+
+```javascript:jest.config.js
+transformIgnorePatterns: [
+    'node_modules/(?!((jest-)?react-native|react-router-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|以下略))',
+  ],
+```
+
+```javascript:jest.config.js
+module.exports = {
+  preset: 'jest-expo',
+  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  transform: {
+    '^.+\\.(js)$': '<rootDir>/node_modules/babel-jest',
+    '\\.(ts)$': 'ts-jest',
+    '^.+\\.tsx?$': 'babel-jest',
+  },
+  testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
+  testPathIgnorePatterns: ['\\.snap$', '<rootDir>/node_modules/'],
+  cacheDirectory: '.jest/cache',
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+    },
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!((jest-)?react-native|react-router-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|以下略))',
+  ],
+};
+```
