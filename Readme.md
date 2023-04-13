@@ -100,3 +100,15 @@ module.exports = {
   ],
 };
 ```
+
+## React Nativeテキストの切り詰め
+
+```flexWrap``` プロパティに ```'wrap'``` を指定しているため、テキストが画面幅を超えた場合に自動的に改行されます。また、 ```wordBreak``` プロパティに ```'break-word'``` を指定しているため、単語の途中でも自動的に改行され、文字列が画面からはみ出すことを防ぎます。
+
+※ただし、 ```break-word``` は必ずしも単語の意味での改行を保証するものではない
+
+```typescript
+<Text style={{flexWrap: 'wrap', wordBreak: 'break-word'}}>
+  This is a long text that will wrap and break at any point if needed.
+</Text>
+```
