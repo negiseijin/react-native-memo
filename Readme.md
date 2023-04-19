@@ -112,3 +112,23 @@ module.exports = {
   This is a long text that will wrap and break at any point if needed.
 </Text>
 ```
+
+## jest mock集
+
+```typescript
+https://github.com/FullStackCraft/DefinitelyTested
+https://chrisfrew.in/blog/a-production-ready-jest-setup-for-react-native-all-mocks/
+
+import {NativeModules} from 'react-native';
+
+NativeModules.RNPermissions = {};
+
+
+import mockRNLocalize from "react-native-localize/mock";
+
+jest.mock("react-native-localize", () => mockRNLocalize);
+
+or
+
+jest.mock('react-native-localize', () => {});
+```
