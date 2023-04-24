@@ -132,3 +132,7 @@ or
 
 jest.mock('react-native-localize', () => {});
 ```
+
+## svg
+
+https://stackoverflow.com/questions/61657859/how-to-find-correct-values-for-width-height-and-viewbox-with-react-native-svg
