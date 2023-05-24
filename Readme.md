@@ -136,6 +136,11 @@ jest.mock('react-native-localize', () => {});
 ## svg
 
 https://stackoverflow.com/questions/61657859/how-to-find-correct-values-for-width-height-and-viewbox-with-react-native-svg
+
+
+## 位置情報
+
+```
 位置情報表示なし（1回目）
  check(ACCESS_FINE_LOCATION) denied
  LOG  The permission has not been requested / is denied but requestable
@@ -164,5 +169,8 @@ https://stackoverflow.com/questions/61657859/how-to-find-correct-values-for-widt
 位置情報表示なし（1回目）
 check(ACCESS_BACKGROUND_LOCATION) denied
 The permission has not been requested / is denied but requestable
+```
+
+https://github.com/zoontek/react-native-permissions/issues/620#issuecomment-866690012
 
 https://wasabeef.medium.com/android-targetsdkversion-29-30-%E5%88%A5%E3%81%AB%E3%82%88%E3%82%8B%E3%83%90%E3%83%83%E3%82%AF%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E4%BD%8D%E7%BD%AE%E6%83%85%E5%A0%B1%E5%8F%96%E5%BE%97%E3%81%AE%E6%8C%99%E5%8B%95%E5%B7%AE-67cefa9b34bd
